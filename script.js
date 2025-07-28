@@ -280,3 +280,25 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', handleResize);
     handleResize(); // 初期実行
 }); 
+
+// ハンバーガーメニューの動作
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (hamburgerMenu && mobileMenu) {
+    // ハンバーガーメニューをクリック
+    hamburgerMenu.addEventListener('click', function() {
+      hamburgerMenu.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // モバイルメニューの背景をクリックして閉じる
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        hamburgerMenu.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+  }
+}); 
