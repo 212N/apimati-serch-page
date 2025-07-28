@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品を探す | あぴまち Net.</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <!-- index.htmlのヘッダー部分をそのままコピー -->
+  <header class="header">
+    <div class="header-container">
+      <!-- デスクトップレイアウト -->
+      <div class="desktop-layout">
+        <div class="header-logo">
+          <img src="assets/logo-area.svg" alt="あぴまちNet.ロゴ" class="logo-img">
+        </div>
+        <div class="header-search">
+          <div class="search-box">
+            <input type="text" placeholder="キーワードから探す" class="search-input">
+            <button type="button" class="search-btn" aria-label="検索">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="product-count">
+            <div class="count-label">商品点数</div>
+            <div class="count-number">23889点</div>
+          </div>
+        </div>
+        <div class="header-nav">
+          <a href="#" class="nav-login">ログイン／会員登録</a>
+          <a href="#" class="nav-item">
+            <div class="nav-icon"><i class="fas fa-user"></i></div>
+            <div class="nav-label">マイページ</div>
+          </a>
+          <a href="#" class="nav-item">
+            <div class="nav-icon"><i class="fas fa-heart"></i></div>
+            <div class="nav-label">お気に入り</div>
+          </a>
+          <a href="#" class="nav-item nav-cart">
+            <div class="nav-icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="nav-label">カート</div>
+            <span class="cart-badge">9</span>
+          </a>
+        </div>
+      </div>
+      <!-- モバイルレイアウト -->
+      <div class="mobile-layout">
+        <div class="mobile-header-top">
+          <div class="mobile-left">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <div class="hamburger-icon">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="mobile-search">
+              <div class="search-box">
+                <input type="text" placeholder="キーワードから探す" class="search-input">
+                <button type="button" class="search-btn" aria-label="検索">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-logo">
+            <img src="assets/logo-area.svg" alt="あぴまちNet.ロゴ" class="logo-img">
+          </div>
+          <div class="mobile-nav">
+            <a href="#" class="mobile-nav-item">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="#" class="mobile-nav-item nav-cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-badge">9</span>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-product-count">
+          商品点数 23889点
+        </div>
+      </div>
+    </div>
+    <!-- ハンバーガーメニュー内容 -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-heart"></i>
+          <span>お気に入り</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-user"></i>
+          <span>ログイン／会員登録</span>
+        </a>
+        <div class="mobile-menu-divider"></div>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-search"></i>
+          <span>商品を探す</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-info-circle"></i>
+          <span>商品について</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-question-circle"></i>
+          <span>ご利用ガイド</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-palette"></i>
+          <span>オリジナルオーダー</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-th-large"></i>
+          <span>カテゴリ</span>
+        </a>
+        <a href="#" class="mobile-menu-item">
+          <i class="fas fa-envelope"></i>
+          <span>問い合わせ</span>
+        </a>
+      </div>
+    </div>
+    <!-- セカンダリナビゲーション -->
+    <nav class="secondary-nav">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">商品を探す <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" target="_blank">キーワード検索</a></li>
+              <li><a href="#" target="_blank">のぼり</a></li>
+              <li><a href="#" target="_blank">タペストリー</a></li>
+              <li><a href="#" target="_blank">バナー幕</a></li>
+              <li><a href="#" target="_blank">看板</a></li>
+              <li><a href="#" target="_blank">横断幕</a></li>
+              <li><a href="#" target="_blank">垂れ幕</a></li>
+              <li><a href="#" target="_blank">関連商品</a></li>
+              <li><a href="#" target="_blank">オリジナルオーダー</a></li>
+              <li><a href="#" target="_blank">NJグッズ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">商品について <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" target="_blank">取り扱い商品一覧</a></li>
+              <li><a href="#" target="_blank">料金一覧</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">ご利用ガイド <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" target="_blank">既製デザイン商品注文方法</a></li>
+              <li><a href="#" target="_blank">オリジナルオーダー注文方法</a></li>
+              <li><a href="#" target="_blank">お届け納期目安と配送方法</a></li>
+              <li><a href="#" target="_blank">お支払い方法</a></li>
+              <li><a href="#" target="_blank">初めての方へ</a></li>
+              <li><a href="#" target="_blank">よくある質問</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">オリジナルオーダー <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" target="_blank">オリジナルオーダー制作事例</a></li>
+              <li><a href="#" target="_blank">オリジナルオーダー</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">カテゴリ <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" target="_blank">カテゴリー一覧</a></li>
+              <li><a href="#" target="_blank">「飲食」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「住まい・暮らし」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「美容・健康」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「地域・観光」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「イベント・季節」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「不動産・建設」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「カルチャー・教養」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「雑貨」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「車・バイク関連」カテゴリ一覧</a></li>
+              <li><a href="#" target="_blank">「その他」カテゴリ一覧</a></li>
+            </ul>
+          </li>
+          <li><a href="#">問い合わせ <i class="fas fa-chevron-down"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main-content">
+    <!-- 商品カテゴリ＆業種カテゴリページ本体 -->
+    <section class="page-product-search" style="background:#f6faf6; padding: 32px 16px;">
+
+      <!-- パンくずリスト -->
+      <nav class="breadcrumbs" style="margin-bottom: 24px;">
+        <p class="text-top-nav" style="margin:0; font-size:14px; color:#8ca08c;">TOP ＞ 商品を探す</p>
+      </nav>
+
+      <!-- 検索バー -->
+      <div class="search-bar" style="margin-bottom: 32px;">
+        <div class="search-input" style="position:relative; max-width:340px; margin:0 auto;">
+          <input type="text" placeholder="キーワードから探す" style="width:100%; border:1px solid #d6e2d6; border-radius:6px; padding:10px 40px 10px 16px; font-size:16px; background:#fff;">
+          <span class="search-icon" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#8ca08c; font-size:20px;">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <div class="keyword-tags" style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:12px;">
+          <span class="tag-nobori" style="font-size:14px; background:#f0f4f0; padding:4px 12px; border-radius:4px; color:#55614e;">のぼり</span>
+          <span class="tag-sign" style="font-size:14px; background:#f0f4f0; padding:4px 12px; border-radius:4px; color:#55614e;">看板</span>
+          <span class="tag-tapestry" style="font-size:14px; background:#f0f4f0; padding:4px 12px; border-radius:4px; color:#55614e;">タペストリー</span>
+          <span class="tag-banner" style="font-size:14px; background:#f0f4f0; padding:4px 12px; border-radius:4px; color:#55614e;">バナー幕</span>
+        </div>
+      </div>
+
+      <!-- 商品カテゴリ 見出し -->
+      <div class="category-heading" style="text-align:center; margin-bottom:24px;">
+        <h2 class="category-title-ja" style="font-size:24px; font-weight:bold; color:#55614e; margin:0 0 4px 0;">商品カテゴリから探す</h2>
+        <div class="category-title-en-container" style="display:flex; justify-content:center; align-items:center; gap:8px; margin:0 0 8px 0;">
+          <img src="assets/category-icon.svg" alt="商品カテゴリアイコン" style="width:40px; height:40px;">
+          <p class="category-title-en" style="font-size:14px; color:#8ca08c; margin:0;">Browse by Category</p>
+        </div>
+        <div class="category-icon" style="display:flex; justify-content:center; align-items:center;">
+          
+        </div>
+      </div>
+
+      <!-- 商品カテゴリ グリッド -->
+      <div class="category-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin-bottom:40px; max-width:1200px; margin-left:auto; margin-right:auto;">
+        <style>
+          @media (min-width: 768px) {
+            .category-grid {
+              grid-template-columns: repeat(3, 1fr) !important;
+              transform: scale(0.6) !important;
+              transform-origin: center top !important;
+              margin-bottom: 20px !important;
+            }
+          }
+        </style>
+        
+        <!-- のぼり旗 -->
+        <div class="category-card-nobori" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-nobori.svg" alt="のぼり旗" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- 看板 -->
+        <div class="category-card-sign" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-kanban.svg" alt="看板" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- タペストリー -->
+        <div class="category-card-tapestry" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-tapestry.svg" alt="タペストリー" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- 横断幕 -->
+        <div class="category-card-yoko" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/categoryhcard-horizontal banner.svg" alt="横断幕" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- バナー幕 -->
+        <div class="category-card-banner" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-banner.svg" alt="バナー幕" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- 垂れ幕 -->
+        <div class="category-card-tare" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-Vertical banner.svg" alt="垂れ幕" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- 関連商品 -->
+        <div class="category-card-goods" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/category-card-related_products.svg" alt="関連商品" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- オリジナルオーダー -->
+        <div class="category-card-original" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/original.svg" alt="オリジナルオーダー" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- NJ公式グッズ -->
+        <div class="category-card-nj" style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative; aspect-ratio:395/556;">
+          <div class="category-image" style="height:100%; background:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/njgoods.svg" alt="NJ公式グッズ" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 業種カテゴリ 見出し -->
+      <div class="industry-heading" style="text-align:center; margin-bottom:24px;">
+        <h2 class="industry-title-ja" style="font-size:24px; font-weight:bold; color:#55614e; margin:0 0 4px 0;">業種別から探す</h2>
+        <p class="industry-title-en" style="font-size:14px; color:#8ca08c; margin:0 0 8px 0;">Browse by Industry</p>
+        <div class="industry-icon" style="display:flex; justify-content:center; align-items:center;">
+          <img src="assets/industry-heading.svg" alt="業種カテゴリアイコン" style="width:40px; height:40px;">
+        </div>
+      </div>
+
+      <!-- 業種カテゴリ グリッド -->
+      <div class="industry-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; max-width:1200px; margin-left:auto; margin-right:auto;">
+        <style>
+          @media (min-width: 768px) {
+            .industry-grid {
+              grid-template-columns: repeat(3, 1fr) !important;
+              transform: scale(0.8) !important;
+              transform-origin: center top !important;
+              margin-bottom: 20px !important;
+            }
+            .industry-card-food, .industry-card-living, .industry-card-beauty, .industry-card-realestate, .industry-card-culture, .industry-card-tourism, .industry-card-event, .industry-card-entertainment, .industry-card-feature {
+              width: 237px !important;
+              height: 240px !important;
+            }
+          }
+          @media (min-width: 1024px) {
+            .industry-card-food, .industry-card-living, .industry-card-beauty, .industry-card-realestate, .industry-card-culture, .industry-card-tourism, .industry-card-event, .industry-card-entertainment, .industry-card-feature {
+              width: 316px !important;
+              height: 320px !important;
+            }
+          }
+        </style>
+        
+        <!-- 飲食 -->
+        <div class="industry-card-food" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-food.svg" alt="飲食" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 住まい・暮らし -->
+        <div class="industry-card-living" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-living.svg" alt="住まい・暮らし" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 美容・健康 -->
+        <div class="industry-card-beauty" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-beauty.svg" alt="美容・健康" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 不動産・建築 -->
+        <div class="industry-card-realestate" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-realestate.svg" alt="不動産・建築" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- カルチャー・教養 -->
+        <div class="industry-card-culture" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-culture.svg" alt="カルチャー・教養" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 地域・観光 -->
+        <div class="industry-card-tourism" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-tourism.svg" alt="地域・観光" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- イベント・季節 -->
+        <div class="industry-card-event" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-event.svg" alt="イベント・季節" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 娯楽 -->
+        <div class="industry-card-entertainment" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-entertainment.svg" alt="娯楽" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+        <!-- 特集 -->
+        <div class="industry-card-feature" style="width:158px; height:160px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+          <div class="industry-icon" style="display:flex; align-items:center; justify-content:center; height:100%;">
+            <img src="assets/industry-card-feature.svg" alt="特集" style="width:100%; height:100%; object-fit:contain;">
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <!-- index.htmlのフッター部分をそのままコピー -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/footer-logo.svg" alt="あぴまちNet" class="footer-logo-img">
+        <div class="company-character">
+          <img src="assets/api chara.png" alt="あぴまちキャラクター" class="chara-img">
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="category-links">
+          <div class="industry-links">
+            <h3 class="link-title">商品カテゴリ</h3>
+            <div class="link-list">
+              <a href="#" class="footer-link">のぼり</a>
+              <a href="#" class="footer-link">看板</a>
+              <a href="#" class="footer-link">タペストリー</a>
+              <a href="#" class="footer-link">横断幕</a>
+              <a href="#" class="footer-link">垂れ幕</a>
+              <a href="#" class="footer-link">バナー幕</a>
+              <a href="#" class="footer-link">関連商品</a>
+              <a href="#" class="footer-link">オリジナルオーダー</a>
+              <a href="#" class="footer-link">NJ公式グッズ</a>
+            </div>
+          </div>
+          <div class="genre-links">
+            <h3 class="link-title">業種別カテゴリ</h3>
+            <div class="link-list">
+              <a href="#" class="footer-link">飲食</a>
+              <a href="#" class="footer-link">住まい・暮らし</a>
+              <a href="#" class="footer-link">美容・健康</a>
+              <a href="#" class="footer-link">不動産・建築</a>
+              <a href="#" class="footer-link">カルチャー・教養</a>
+              <a href="#" class="footer-link">地域・観光</a>
+              <a href="#" class="footer-link">イベント・季節</a>
+              <a href="#" class="footer-link">娯楽</a>
+              <a href="#" class="footer-link">特集</a>
+            </div>
+          </div>
+          <div class="news-links">
+            <h3 class="link-title">お知らせ</h3>
+            <div class="link-list">
+              <a href="#" class="footer-link">オリジナルオーダー</a>
+              <a href="#" class="footer-link">関連アイテム</a>
+              <a href="#" class="footer-link">ご利用ガイド</a>
+              <a href="#" class="footer-link">料金一覧</a>
+              <a href="#" class="footer-link">お届け納期と発送方法</a>
+              <a href="#" class="footer-link">お支払い方法</a>
+            </div>
+          </div>
+          <div class="support-links">
+            <h3 class="link-title">初めての方へ</h3>
+            <div class="link-list">
+              <a href="#" class="footer-link">よくある質問</a>
+              <a href="#" class="footer-link">問い合わせ</a>
+              <a href="/download/fax.pdf" class="footer-link fax-link">
+                <img src="assets/download-link.svg" alt="FAX注文用紙ダウンロード" class="download-icon-inline">
+              </a>
+            </div>
+          </div>
+          <div class="footer-contact-area">
+            <div class="company-info">
+              <div class="company-details">
+                <p class="company-name">株式会社 自由画房</p>
+                <p class="company-postal">〒890-0073</p>
+                <p class="company-address">鹿児島県鹿児島市宇宿3丁目42-12</p>
+                <div class="free-dial">
+                  <img src="assets/Free.svg" alt="フリーダイヤル" class="free-dial-icon">
+                  <span class="phone-number">0120-828-889</span>
+                </div>
+                <p class="company-hours">平日9:00~12:00 / 13:00~17:00</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link instagram">
+                <svg width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.78 25.3405C25.78 25.9069 25.67 26.4629 25.45 26.9895C25.23 27.5161 24.91 27.9832 24.51 28.3906C24.11 28.788 23.6301 29.1059 23.1001 29.3245C22.5701 29.5431 22.0099 29.6524 21.4399 29.6524H12.55C11.4 29.6524 10.3 29.1954 9.47998 28.3906C8.66998 27.5858 8.20996 26.4831 8.20996 25.3405V16.5076C8.20996 15.365 8.66998 14.2723 9.47998 13.4576C10.29 12.6429 11.4 12.1957 12.55 12.1957H21.4399C22.5899 12.1957 23.69 12.6528 24.51 13.4576C25.33 14.2624 25.78 15.365 25.78 16.5076V25.3405ZM21.4399 10H12.55C10.81 10 9.14992 10.6855 7.91992 11.9076C6.68992 13.1296 6 14.7788 6 16.5076V25.3405C6 27.0693 6.68992 28.7185 7.91992 29.9406C9.14992 31.1627 10.81 31.8482 12.55 31.8482H21.4399C23.1799 31.8482 24.8401 31.1627 26.0701 29.9406C27.3001 28.7185 27.99 27.0693 27.99 25.3405V16.5076C27.99 14.7788 27.3001 13.1296 26.0701 11.9076C24.8401 10.6855 23.1799 10 21.4399 10Z" fill="white"/>
+                  <path d="M17 24.3776C16.08 24.3776 15.19 24.0099 14.54 23.3641C13.89 22.7183 13.52 21.8341 13.52 20.92C13.52 20.0059 13.89 19.1217 14.54 18.4759C15.19 17.83 16.08 17.4624 17 17.4624C17.92 17.4624 18.81 17.83 19.46 18.4759C20.11 19.1217 20.48 20.0059 20.48 20.92C20.48 21.8341 20.11 22.7183 19.46 23.3641C18.81 24.0099 17.92 24.3776 17 24.3776ZM17 15.2764C15.49 15.2764 14.05 15.8729 12.98 16.936C11.91 17.9991 11.3101 19.4299 11.3101 20.9302C11.3101 22.4304 11.91 23.8612 12.98 24.9243C14.05 25.9874 15.49 26.5835 17 26.5835C18.51 26.5835 19.95 25.9874 21.02 24.9243C22.09 23.8612 22.6899 22.4304 22.6899 20.9302C22.6899 19.4299 22.09 17.9991 21.02 16.936C19.95 15.8729 18.51 15.2764 17 15.2764Z" fill="white"/>
+                  <path d="M22.7 16.6851C23.45 16.6851 24.0601 16.0747 24.0601 15.3247C24.0601 14.5747 23.45 13.9648 22.7 13.9648C21.95 13.9648 21.3401 14.5747 21.3401 15.3247C21.3401 16.0747 21.95 16.6851 22.7 16.6851Z" fill="white"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link ameba">
+                <span class="social-text">Ameba</span>
+                <svg width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.78 25.3405C25.78 25.9069 25.67 26.4629 25.45 26.9895C25.23 27.5161 24.91 27.9832 24.51 28.3906C24.11 28.788 23.6301 29.1059 23.1001 29.3245C22.5701 29.5431 22.0099 29.6524 21.4399 29.6524H12.55C11.4 29.6524 10.3 29.1954 9.47998 28.3906C8.66998 27.5858 8.20996 26.4831 8.20996 25.3405V16.5076C8.20996 15.365 8.66998 14.2723 9.47998 13.4576C10.29 12.6429 11.4 12.1957 12.55 12.1957H21.4399C22.5899 12.1957 23.69 12.6528 24.51 13.4576C25.33 14.2624 25.78 15.365 25.78 16.5076V25.3405ZM21.4399 10H12.55C10.81 10 9.14992 10.6855 7.91992 11.9076C6.68992 13.1296 6 14.7788 6 16.5076V25.3405C6 27.0693 6.68992 28.7185 7.91992 29.9406C9.14992 31.1627 10.81 31.8482 12.55 31.8482H21.4399C23.1799 31.8482 24.8401 31.1627 26.0701 29.9406C27.3001 28.7185 27.99 27.0693 27.99 25.3405V16.5076C27.99 14.7788 27.3001 13.1296 26.0701 11.9076C24.8401 10.6855 23.1799 10 21.4399 10Z" fill="white"/>
+                  <path d="M17 24.3776C16.08 24.3776 15.19 24.0099 14.54 23.3641C13.89 22.7183 13.52 21.8341 13.52 20.92C13.52 20.0059 13.89 19.1217 14.54 18.4759C15.19 17.83 16.08 17.4624 17 17.4624C17.92 17.4624 18.81 17.83 19.46 18.4759C20.11 19.1217 20.48 20.0059 20.48 20.92C20.48 21.8341 20.11 22.7183 19.46 23.3641C18.81 24.0099 17.92 24.3776 17 24.3776ZM17 15.2764C15.49 15.2764 14.05 15.8729 12.98 16.936C11.91 17.9991 11.3101 19.4299 11.3101 20.9302C11.3101 22.4304 11.91 23.8612 12.98 24.9243C14.05 25.9874 15.49 26.5835 17 26.5835C18.51 26.5835 19.95 25.9874 21.02 24.9243C22.09 23.8612 22.6899 22.4304 22.6899 20.9302C22.6899 19.4299 22.09 17.9991 21.02 16.936C19.95 15.8729 18.51 15.2764 17 15.2764Z" fill="white"/>
+                  <path d="M22.7 16.6851C23.45 16.6851 24.0601 16.0747 24.0601 15.3247C24.0601 14.5747 23.45 13.9648 22.7 13.9648C21.95 13.9648 21.3401 14.5747 21.3401 15.3247C21.3401 16.0747 21.95 16.6851 22.7 16.6851Z" fill="white"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link youtube">
+                <svg width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M173.43 12.4438H152.4C150.787 12.4438 149.48 13.7432 149.48 15.3454V26.5031C149.48 28.1054 150.787 29.4042 152.4 29.4042H173.43C175.043 29.4042 176.35 28.1054 176.35 26.5031V15.3454C176.35 13.7432 175.043 12.4438 173.43 12.4438Z" fill="white"/>
+                  <path d="M160.15 16.6763L167 20.9285L160.15 25.171V16.6763Z" fill="#899284"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- フッター下部 -->
+  <div class="footer-bottom-wrapper">
+    <div class="footer-bottom-container">
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>Copyright © 株式会社 自由画房 All Rights Reserved</p>
+        </div>
+        <div class="legal-links">
+          <a href="#" class="legal-link">会社概要</a>
+          <a href="#" class="legal-link">プライバシーポリシー</a>
+          <a href="#" class="legal-link">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
