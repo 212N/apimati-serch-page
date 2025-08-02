@@ -224,6 +224,8 @@ body {
   list-style: none;
   gap: 40px;
   padding: 16px 0;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-menu li a {
@@ -871,4 +873,9 @@ body {
     width: 28px;
     height: 28px;
   }
+}
+
+/* メインコンテンツ */
+.main-content {
+  min-height: 100vh;
 }
